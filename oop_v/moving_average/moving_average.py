@@ -16,7 +16,9 @@ def moving_average(values, window):
     return smas
 
 
-for i in moving_average(data2, 3):
+window = int(input("Введите размер окна: "))
+
+for i in moving_average(data2, window):
     output.write(str(i) + '\n')
 
 data.close()

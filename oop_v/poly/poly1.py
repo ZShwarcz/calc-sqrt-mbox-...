@@ -1,13 +1,11 @@
 import sys
 
 
-class Poly:
-    def __init__(self, t):
-        self.t = t
-        self.add = 0
-        for line in t:
-            self.add += 1 / float(line) * 3
-        print("Poly = ", self.add)
+def poly(t):
+    add = 0
+    for line in t:
+        add += 1 / float(line) * 3
+    print("poly = ",add)
 
 
 def my_help():
@@ -25,12 +23,9 @@ try:
         """for string error"""
         for i in sys.argv[2:]:
             float(i)
-        test = Poly(sys.argv[2:])
+        poly(sys.argv[2:])
     else:
         print("wrong argument command line")
 except Exception:
     print(sys.exc_info()[1])
     exit()
-
-
-

@@ -42,9 +42,8 @@ class Email:
             if temp in line:
                 count +=1
                 value += float(line[20:])
-        print("Everage_value = " + str(value / count))
+        print("Average spam confidence: " + str(value / count))
         op.close()
-
 
 
 test = Email()

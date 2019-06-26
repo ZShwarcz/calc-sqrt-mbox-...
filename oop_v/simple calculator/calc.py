@@ -10,22 +10,24 @@ class Calc:
         self.b = b
         self.c = c
 
-    def calculate(self):
-        """calculate values"""
-        if self.c == '+':
-            """addition"""
-            print(float(self.a + self.b))
-        elif self.c == '-':
-            """subtraction"""
-            print(self.a - self.b)
-        elif self.c == '/' and self.b != 0:
+    def addition(self, a, b):
+        """addition"""
+        print(float(self.a + self.b))
+
+    def subtraction(self, a, b):
+        """subtraction"""
+        print(float(self.a - self.b))
+
+    def division(self, a, b):
+        if self.b != 0:
             """division"""
             print(self.a / self.b)
-        elif self.c == '*':
-            """multiplication"""
-            print(float(self.a * self.b))
         else:
             print(" b not can = 0")
+
+    def multiplication(self, a, b):
+        """multiplication"""
+        print(float(self.a * self.b))
 
 
 print("this is calc")
@@ -43,7 +45,16 @@ while True:
     else:
 
         test = Calc(a, b, c)
-        test.calculate()
+        if c == '+':
+            test.addition(a, b)
+        elif c == '-':
+            test.subtraction(a, b)
+        elif c == '/':
+            test.division(a, b)
+        elif c == '*':
+            test.multiplication(a, b)
+        else:
+            print("ALLERT")
 
 
 
